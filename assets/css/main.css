@@ -1,0 +1,1226 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), url("../fonts/Roboto-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+:root {
+  --black-0: #000000;
+  --black-1: #1F2525;
+  --black-2: #101D1D;
+  --black-3: #070D0D;
+  --black-4: #0C0B0B;
+  --black-opacity-0: #1F252580;
+  --gray-0: #D7D7D7;
+  --gray-1: #E3E3E3;
+  --orange-0: #FF760C;
+  --red-0: #DD0E0E;
+  --red-1: #250303;
+  --red-2: #3A1C1C;
+  --red-3: #921515;
+  --red-4: #B43D3D;
+  --red-opacity-0: #DD0E0E8A;
+  --red-opacity-1: #FF525280;
+  --white-0: #FFFFFF;
+  --white-opacity-0: #FFFFFF47;
+  --white-opacity-1: #FFFFFF1A;
+  --yellow-opacity-0: #F6BC1BB3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+body, div, article, aside, form, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, span {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+}
+
+body#mask {
+  background-image: url(../images/clipboard-backgrond-mobile.svg);
+  background-color: var(--red-2);
+}
+
+body#mask-black {
+  background-color: var(--black-3);
+}
+
+body#black {
+  background-color: var(--black-3);
+}
+
+#header a {
+  margin: 43px auto 122px auto;
+}
+#header .logo-desktop {
+  display: none;
+}
+
+#header.image {
+  background-image: url("/assets/images/burguer-mobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#header.image #overlay {
+  background-color: var(--black-opacity-0);
+  width: 100%;
+  position: relative;
+}
+#header.image #overlay a {
+  margin: 45px auto 122px auto;
+}
+#header.image #overlay div {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#header.image #overlay div picture a {
+  margin: 0;
+}
+#header.image #overlay div picture a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#header-pay {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 368px;
+  background: linear-gradient(180deg, rgba(7, 13, 13, 0.5019607843) 50%, #070D0D 100%), url("../images/burguer-mobile.png");
+  background-size: cover;
+}
+#header-pay .logo {
+  width: 220px;
+  height: 200px;
+  margin-top: 43px;
+  background-image: url("../images/logo-mobile.svg");
+  background-repeat: no-repeat;
+}
+#header-pay .img-user {
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: 1440px) {
+  #header {
+    margin: 75px auto 130px auto;
+  }
+  #header .logo-mobile {
+    display: none;
+  }
+  #header .logo-desktop {
+    display: flex;
+  }
+  #header.image {
+    margin: 0;
+  }
+  #header.image .logo-mobile {
+    display: none;
+  }
+  #header.image .logo-desktop {
+    display: flex;
+  }
+}
+#home {
+  min-height: calc(100vh - 400px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#home .acess {
+  display: inline;
+  position: relative;
+}
+#home .acess .register .login {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-0);
+  border: 1px solid var(--red-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#home .acess .register .registration {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#home .acess .fields {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 52px;
+  background-color: var(--red-0);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--red-0);
+}
+#home .acess .fields .field {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 10px;
+}
+#home .acess .fields .field input {
+  width: 280px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--black-0);
+  border: 0;
+  background-color: var(--white-0);
+}
+#home .acess .fields .field label {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  left: 20px;
+}
+#home .acess .actions {
+  margin-top: 10px;
+  position: absolute;
+  justify-content: space-between;
+  align-items: flex-start;
+  left: 35px;
+  right: 35px;
+  bottom: -10px;
+}
+#home .acess .actions div {
+  padding: 0px 50px 0px 0px;
+}
+#home .acess .actions div a {
+  color: var(--white-0);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+#home .acess .actions button {
+  min-width: 110px;
+  border: none;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--black);
+  background-color: var(--black-2);
+  color: var(--white-0);
+}
+
+#forgot-password {
+  min-height: calc(100vh - 400px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#forgot-password .acess {
+  display: inline;
+  position: relative;
+}
+#forgot-password .acess .register .login {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#forgot-password .acess .register .registration {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#forgot-password .acess .fields {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 43px;
+  background-color: var(--red-0);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--red-0);
+  position: relative;
+}
+#forgot-password .acess .fields span {
+  position: absolute;
+  left: 35px;
+  bottom: 120px;
+  color: var(--white-0);
+}
+#forgot-password .acess .fields .field {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 10px;
+}
+#forgot-password .acess .fields .field input {
+  width: 280px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--black-0);
+  border: 0;
+  background-color: var(--white-0);
+}
+#forgot-password .acess .fields .field label {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  left: 20px;
+}
+#forgot-password .acess .actions {
+  margin-top: 10px;
+  position: absolute;
+  right: 35px;
+  bottom: -10px;
+}
+#forgot-password .acess .actions button {
+  min-width: 110px;
+  border: none;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--black);
+  background-color: var(--black-2);
+  color: var(--white-0);
+}
+
+#registration {
+  min-height: calc(100vh - 400px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#registration .acess {
+  display: inline;
+  position: relative;
+}
+#registration .acess .register .login {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-opacity-0);
+  border: 1px solid var(--red-opacity-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#registration .acess .register .registration {
+  width: 175px;
+  height: 64px;
+  text-transform: uppercase;
+  background-color: var(--red-0);
+  border: 1px solid var(--red-0);
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+}
+#registration .acess .fields {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 43px;
+  background-color: var(--red-0);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--red-0);
+}
+#registration .acess .fields .field {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 10px;
+}
+#registration .acess .fields .field input {
+  width: 280px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--black-0);
+  border: 0;
+  background-color: var(--white-0);
+}
+#registration .acess .fields .field label {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  left: 20px;
+}
+#registration .acess .actions {
+  margin-top: 10px;
+  position: absolute;
+  right: 35px;
+  bottom: -10px;
+}
+#registration .acess .actions button {
+  min-width: 110px;
+  border: none;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--black);
+  background-color: var(--black-2);
+  color: var(--white-0);
+}
+
+#app {
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+#app #header {
+  height: 368px;
+  position: relative;
+  background-image: url("../images/burguer-mobile.png");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+#app .img-profile {
+  position: absolute;
+  width: 95%;
+  justify-content: end;
+}
+#app #home {
+  width: 357px;
+  height: 204px;
+  margin: 30px 34px 248px 23px;
+}
+#app #home hr {
+  border-top: black 0.1;
+}
+#app li {
+  flex-direction: column;
+}
+#app li section {
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+#app li section div {
+  width: 40%;
+  flex-direction: column;
+  margin: 8px;
+}
+#app li section div label, #app li section div span {
+  font-size: 1em;
+  color: var(--dark-0);
+}
+#app li section div label {
+  font-weight: 500;
+}
+
+.footer {
+  width: 100%;
+  height: 64px;
+}
+.footer .hidden {
+  width: 24px;
+  height: 24px;
+  color: black;
+  font-weight: 500;
+  margin-right: 9px;
+  margin-top: 23px;
+}
+.footer .tray {
+  width: 81px;
+  height: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 29px;
+  margin-right: 80px;
+}
+
+footer .subtotal {
+  flex-direction: column;
+  width: 137px;
+  height: 64px;
+  background-color: #E3E3E3;
+  padding: 13px 20px;
+  font-family: "Roboto";
+  font-style: normal;
+}
+footer .subtotal .subtotal-price {
+  font-size: 24px;
+  font-weight: 500;
+}
+footer .subtotal .subtotal-text {
+  font-size: 10px;
+  text-align: end;
+  justify-content: end;
+}
+
+footer .cash {
+  flex-direction: column;
+  width: 64px;
+  height: 64px;
+  background-color: red;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+footer .cash img {
+  width: 24px;
+  height: 24px;
+}
+
+#header {
+  min-width: 400px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#header .img-header {
+  width: 100%;
+  background-image: url(../images/burguer-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  height: 351px;
+  position: relative;
+}
+
+.img-profile {
+  display: block;
+  right: 0px;
+  position: absolute;
+  justify-content: end;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.logo {
+  width: 100%;
+  height: 351px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+#order-ticket {
+  min-width: 400px;
+  width: 100%;
+  margin-bottom: 31px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#order-ticket .box-orders {
+  width: 100%;
+  display: flex;
+  height: 80px;
+  background-color: var(--black-1);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  font-family: "Roboto";
+}
+
+#order {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 31px;
+  margin-bottom: 0px;
+}
+#order .container-one, #order .container-two {
+  margin-bottom: 18px;
+  width: 350px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+#order .container-one .box-one-1, #order .container-two .box-one-1 {
+  width: 50px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px 0px 0px 10px;
+  justify-content: center;
+  align-items: center;
+}
+#order .container-one .box-one-1 .code, #order .container-two .box-one-1 .code {
+  display: flex;
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  transform: rotate(-90deg);
+  width: 137px;
+  height: 28px;
+}
+#order .container-one .box-one-1 .code p, #order .container-two .box-one-1 .code p {
+  font-size: 24px;
+  font-family: "Roboto";
+}
+#order .container-one .box-center, #order .container-two .box-center {
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  justify-content: center;
+  align-items: flex-start;
+}
+#order .container-one .box-center .order-details, #order .container-two .box-center .order-details {
+  width: 235px;
+  height: 33px;
+  background-color: var(--red-0);
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+#order .container-one .box-center .table, #order .container-two .box-center .table {
+  display: inline-table;
+  position: relative;
+  width: 230px;
+  margin-right: 0px;
+}
+#order .container-one .box-center .table tr, #order .container-two .box-center .table tr {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+#order .container-one .box-right, #order .container-two .box-right {
+  width: 52px;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  padding: 16px;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  border-left: 2px dashed var(--black-3);
+  right: 6px;
+  background-color: white;
+}
+#order .container-one .box-right button, #order .container-two .box-right button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Start CSS - Desktop */
+@media (min-width: 1200px) {
+  #header {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  #header .img-header {
+    width: 100%;
+    height: 351px;
+    background-image: url(../images/burguer-desktop-cut.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    position: relative;
+  }
+  #header .img-profile {
+    right: 0;
+    display: block;
+    padding: 0px;
+    position: absolute;
+    width: 100%;
+    justify-content: end;
+  }
+  #header .logo {
+    width: 100%;
+    height: 351px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  #order-ticket {
+    width: 100%;
+    margin-bottom: 31px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #order-ticket .box-orders {
+    width: 100%;
+    height: 80px;
+    background-color: var(--black-1);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+    font-family: "Roboto";
+  }
+  #order {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 31px;
+    margin-bottom: 0px;
+    padding-left: 25px;
+    transition: all 1s ease-in-out;
+  }
+  #order .container-one, #order .container-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 21px;
+  }
+  #order .container-one .box-one-1, #order .container-two .box-one-1 {
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px 0px 0px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  #order .container-one .box-one-1 .code, #order .container-two .box-one-1 .code {
+    display: flex;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    transform: rotate(-90deg);
+    width: 137px;
+    height: 28px;
+  }
+  #order .container-one .box-one-1 .code p, #order .container-two .box-one-1 .code p {
+    font-size: 24px;
+    font-family: "Roboto";
+  }
+  #order .container-one .box-center, #order .container-two .box-center {
+    flex-direction: column;
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #order .container-one .box-center .order-details, #order .container-two .box-center .order-details {
+    width: 235px;
+    height: 33px;
+    background-color: var(--red-0);
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+  #order .container-one .box-center .table, #order .container-two .box-center .table {
+    display: inline-table;
+    position: relative;
+    width: 230px;
+    margin-right: 0px;
+  }
+  #order .container-one .box-center .table tr, #order .container-two .box-center .table tr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  #order .container-one .box-right, #order .container-two .box-right {
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    padding: 16px;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    border-left: 2px dashed var(--black-3);
+    right: 6px;
+    background-color: white;
+  }
+  #order .container-one .box-right button, #order .container-two .box-right button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+#makeburger {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  flex-direction: column;
+}
+#makeburger .title {
+  background-color: var(--white-opacity-1);
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+#makeburger .title h1 {
+  color: var(--white-0);
+  font-weight: 400;
+  font-size: 32px;
+}
+#makeburger .title h1.different-color {
+  color: var(--red-0);
+  margin-left: 8px;
+}
+#makeburger .options {
+  flex-direction: column;
+  margin: 0 35px;
+}
+#makeburger .options .bread-options {
+  flex-direction: column;
+  margin-top: 31px;
+}
+#makeburger .options .bread-options > span {
+  color: var(--white-0);
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+#makeburger .options .bread-options label {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+#makeburger .options .bread-options label .square {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: var(--red-opacity-1) 1px solid;
+  justify-content: center;
+  align-items: center;
+}
+#makeburger .options .bread-options label .square > div {
+  width: 22px;
+  height: 22px;
+  background-color: var(--red-4);
+}
+#makeburger .options .bread-options label input {
+  display: none;
+}
+#makeburger .options .bread-options label input:checked + .square > div {
+  opacity: 1;
+  background: var(--red-4);
+}
+#makeburger .options .bread-options label .content {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: var(--red-opacity-1) 1px dotted;
+  padding-bottom: 6px;
+  margin-left: 12px;
+}
+#makeburger .options .bread-options label .content > span {
+  color: var(--red-opacity-1);
+  font-weight: 500;
+  font-size: 16px;
+}
+#makeburger .options .ingredients-options {
+  flex-direction: column;
+  margin-top: 20px;
+}
+#makeburger .options .ingredients-options > span {
+  color: var(--white-0);
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+#makeburger .options .ingredients-options label {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+#makeburger .options .ingredients-options label .square {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: var(--red-opacity-1) 1px solid;
+  justify-content: center;
+  align-items: center;
+}
+#makeburger .options .ingredients-options label .square > div {
+  width: 22px;
+  height: 22px;
+  background-color: var(--red-4);
+}
+#makeburger .options .ingredients-options label input {
+  display: none;
+}
+#makeburger .options .ingredients-options label input:checked + .square > div {
+  opacity: 1;
+  background: var(--red-4);
+}
+#makeburger .options .ingredients-options label .content {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: var(--red-opacity-1) 1px dotted;
+  padding-bottom: 6px;
+  margin-left: 12px;
+}
+#makeburger .options .ingredients-options label .content > span {
+  color: var(--red-opacity-1);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#summary {
+  background-color: var(--white-0);
+  height: 64px;
+  width: 100%;
+  min-width: 320px;
+}
+#summary header {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 213px;
+}
+#summary header .tray {
+  width: 32px;
+  margin-left: 19px;
+  margin-right: 15px;
+  border: none;
+  background: none;
+}
+#summary header > div {
+  flex-direction: column;
+  justify-content: center;
+}
+#summary header > div small {
+  font-weight: 400;
+  font-size: 10px;
+}
+#summary header > div span {
+  font-weight: bold;
+  font-size: 10px;
+}
+#summary .content {
+  display: none;
+}
+#summary footer .price {
+  flex-direction: column;
+  width: 137px;
+  background-color: var(--gray-1);
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 22px;
+}
+#summary footer .price small {
+  font-weight: 400;
+  font-size: 24px;
+}
+#summary footer .price span {
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 70%;
+}
+#summary footer .payment {
+  height: 64px;
+  width: 64px;
+  background-color: var(--red-0);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#summary footer .payment .pay {
+  height: 24px;
+  width: 24px;
+  background: none;
+  border: none;
+  outline: none;
+}
+#summary footer .payment span {
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--white-0);
+}
+
+@media (min-width: 1440px) {
+  #header.image,
+#makeburger {
+    width: calc(100vw - 400px);
+  }
+  #header.image .title,
+#makeburger .title {
+    justify-content: flex-start;
+    padding-left: 110px;
+  }
+  #header.image .options,
+#makeburger .options {
+    flex-direction: column;
+    margin: 0 35px;
+    width: 414px;
+  }
+  #summary {
+    width: 400px;
+    height: 100vh;
+    right: 0;
+    position: fixed;
+    flex-direction: column;
+  }
+  #summary header {
+    height: 105px;
+    width: 100%;
+  }
+  #summary header .tray {
+    width: 64px;
+    margin-left: 19px;
+    margin-right: 15px;
+    border: none;
+    background: none;
+  }
+  #summary header > div small {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #summary header > div span {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  #summary .content {
+    height: calc(100vh - 169px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 35px;
+  }
+  #summary .content > div {
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: var(--black-3) 1px dotted;
+  }
+  #summary .content > div span {
+    color: var(--black-3);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  #summary footer {
+    height: 64px;
+    width: 100%;
+  }
+}
+.app-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app-body .payment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 368px);
+  background-color: var(--white-0);
+}
+.app-body .payment > div {
+  width: 100%;
+  height: 80px;
+  background: #202525;
+  align-items: center;
+  justify-content: center;
+}
+.app-body .payment > div h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--white-0);
+}
+.app-body form {
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 26px;
+  padding-bottom: 100px;
+}
+.app-body form input {
+  width: 360px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid #D7D7D7;
+  border-radius: 10px;
+  padding-left: 18px;
+}
+.app-body form label {
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  top: 16px;
+  left: 15px;
+  color: var(--black-opacity-0);
+}
+.app-body form .field {
+  position: relative;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.app-body form .pay-field {
+  position: relative;
+  flex-direction: row;
+  flex: content;
+  padding-bottom: 10px;
+  width: 265px;
+  height: 50px;
+}
+.app-body form .pay-field div {
+  position: relative;
+  flex-direction: column;
+}
+.app-body form .pay-field input {
+  width: 172px;
+  height: 50px;
+}
+.app-body form .pay-field .pay-field-1 {
+  padding-left: 15px;
+}
+.app-body .pay-now {
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 64px;
+  bottom: 0px;
+  background: var(--red-0);
+  left: 0;
+}
+.app-body .pay-now > button {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  background: var(--red-0);
+  border: none;
+  color: var(--white-0);
+  background: var(--red-0);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+.app-body .pay-now > img {
+  width: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

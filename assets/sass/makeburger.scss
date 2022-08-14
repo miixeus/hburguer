@@ -1,0 +1,269 @@
+#makeburger {
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    flex-direction: column;
+    .title {
+        background-color: var(--white-opacity-1);
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: var(--white-0);
+            font-weight: 400;
+            font-size: 32px;
+        }
+        h1.different-color {
+            color: var(--red-0);
+            margin-left: 8px;
+        }
+    }
+    .options {
+        flex-direction: column;
+        margin: 0 35px;
+        .bread-options {
+            flex-direction: column;
+            margin-top: 31px;
+            >span {
+                color: var(--white-0);
+                font-weight: bold;
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+            label {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                margin-bottom: 10px;
+                .square {
+                    cursor: pointer;
+                    width: 32px;
+                    height: 32px;
+                    border: var(--red-opacity-1) 1px solid;
+                    justify-content: center;
+                    align-items: center;
+                    >div {
+                        width: 22px;
+                        height: 22px;
+                        background-color: var(--red-4);
+                    }
+                }
+                input {
+                    display: none;
+                    &:checked+.square {
+                        >div {
+                            opacity: 1;
+                            background: var(--red-4);
+                        }
+                    }
+                }
+                .content {
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: var(--red-opacity-1) 1px dotted;
+                    padding-bottom: 6px;
+                    margin-left: 12px;
+                    >span {
+                        color: var(--red-opacity-1);
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .ingredients-options {
+            flex-direction: column;
+            margin-top: 20px;
+            >span {
+                color: var(--white-0);
+                font-weight: bold;
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+            label {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                margin-bottom: 10px;
+                .square {
+                    cursor: pointer;
+                    width: 32px;
+                    height: 32px;
+                    border: var(--red-opacity-1) 1px solid;
+                    justify-content: center;
+                    align-items: center;
+                    >div {
+                        width: 22px;
+                        height: 22px;
+                        background-color: var(--red-4);
+                    }
+                }
+                input {
+                    display: none;
+                    &:checked+.square {
+                        >div {
+                            opacity: 1;
+                            background: var(--red-4);
+                        }
+                    }
+                }
+                .content {
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: var(--red-opacity-1) 1px dotted;
+                    padding-bottom: 6px;
+                    margin-left: 12px;
+                    >span {
+                        color: var(--red-opacity-1);
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+#summary {
+    background-color: var(--white-0);
+    height: 64px;
+    width: 100%;
+    min-width: 320px;
+    header {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 213px;
+        .tray {
+            width: 32px;
+            margin-left: 19px;
+            margin-right: 15px;
+            border: none;
+            background: none;
+        }
+        >div {
+            flex-direction: column;
+            justify-content: center;
+            small {
+                font-weight: 400;
+                font-size: 10px;
+            }
+            span {
+                font-weight: bold;
+                font-size: 10px;
+            }
+        }
+    }
+    .content {
+        display: none;
+    }
+    footer {
+        .price {
+            flex-direction: column;
+            width: 137px;
+            background-color: var(--gray-1);
+            justify-content: center;
+            align-items: flex-end;
+            padding-right: 22px;
+            small {
+                font-weight: 400;
+                font-size: 24px;
+            }
+            span {
+                font-weight: 400;
+                font-size: 10px;
+                opacity: 70%;
+            }
+        }
+        .payment {
+            height: 64px;
+            width: 64px;
+            background-color: var(--red-0);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;        
+            .pay {
+                height: 24px;
+                width: 24px;
+                background: none;
+                border: none;
+                outline: none;
+            }
+            span {
+                font-weight: bold;
+                font-size: 13px;
+                text-transform: uppercase;
+                color: var(--white-0);
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    #header.image,
+    #makeburger {
+        width: calc(100vw - 400px);
+        .title {
+            justify-content: flex-start;    
+            padding-left: 110px;
+        }
+        .options {
+            flex-direction: column;
+            margin: 0 35px;
+            width: 414px;
+        }
+    }
+    
+    #summary {
+        width: 400px;
+        height: 100vh;
+        right: 0;
+        position: fixed;
+        flex-direction: column;
+        header {
+            height: 105px;
+            width: 100%;
+            .tray {
+                width: 64px;
+                margin-left: 19px;
+                margin-right: 15px;
+                border: none;
+                background: none;
+            }
+            >div {
+                small {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                span {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .content {
+            height: calc(100vh - 169px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0 35px;
+            >div {
+                flex-direction: row;
+                justify-content: space-between;
+                border-bottom: var(--black-3) 1px dotted;
+                span {
+                    color: var(--black-3);
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+        }
+        footer {
+            height: 64px;
+            width: 100%;
+        }
+    }
+}

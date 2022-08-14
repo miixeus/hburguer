@@ -1,0 +1,293 @@
+#header {
+    min-width: 400px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    .img-header {
+        width: 100%;
+        background-image: url(../images/burguer-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        height: 351px;
+        position: relative;
+    }
+    }
+    .img-profile {
+        display: block;
+        right: 0px;
+        position: absolute;
+        justify-content: end;
+        align-items: flex-start;
+        margin: 0;
+        
+       
+    }
+    .logo {
+        width: 100%;
+        height: 351px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;   
+    }
+#order-ticket{
+    min-width: 400px;
+    width: 100%;
+    margin-bottom: 31px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .box-orders {
+        width: 100%;
+        display: flex;
+        height: 80px;
+        background-color: var(--black-1);
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 400;
+        font-family: 'Roboto';
+        }
+}
+#order {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 31px;
+    margin-bottom: 0px;
+    .container-one, .container-two {
+        margin-bottom: 18px;
+        width: 350px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        transition: all 1s (ease-in-out);
+        .box-one-1 {
+            width: 50px;
+            height: 150px;
+            background-color: white;
+            border-radius: 10px 0px 0px 10px;
+            justify-content: center;
+            align-items: center;
+            .code {
+                display: flex;
+                color: rgb(0, 0, 0);
+                flex-direction: column;
+                transform: rotate(-90deg);
+                width: 137px;
+                height: 28px;
+                    p {
+                        font-size: 24px;
+                        font-family: 'Roboto';
+                    }
+            }
+        }
+        .box-center {
+            flex-direction: column;
+            position: relative;
+            width: 250px;
+            height: 150px;
+            background-color: white;
+            justify-content: center;
+            align-items: flex-start;  
+            .order-details {
+                width: 235px;
+                height: 33px;
+                background-color: var(--red-0);
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                color: white;
+                margin-top: 6px;
+                margin-bottom: 8px; 
+            }
+                .table {
+                    display: inline-table;
+                    position: relative;
+                    width: 230px;
+                    margin-right: 0px;
+                    tr {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 6px;
+                        }
+                }
+        }    
+        .box-right {
+            width: 52px;
+            height: 150px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            display: flex;
+            padding: 16px;
+            border-radius: 0 10px 10px 0;
+            position: relative;
+            border-left: 2px dashed var(--black-3);
+            right: 6px;
+            background-color: white;
+            button {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                }
+        }
+    }            
+}
+/* Start CSS - Desktop */
+@media (min-width: 1200px) {
+    #header {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        .img-header {
+            width: 100%;
+            height: 351px;
+            background-image: url(../images/burguer-desktop-cut.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            position: relative;
+        }
+        .img-profile {
+           right: 0;
+            display: block;
+            padding: 0px;
+            position: absolute;
+            width: 100%;
+            justify-content: end;
+            
+        }
+        .logo {
+            width: 100%;
+            height: 351px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;   
+        }
+    }
+    
+#order-ticket{
+    width: 100%;
+    margin-bottom: 31px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .box-orders {
+        width: 100%;
+        height: 80px;
+        background-color: var(--black-1);
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 400;
+        font-family: 'Roboto';
+    }
+}
+    #order {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 31px;
+        margin-bottom: 0px;
+        padding-left: 25px;
+        transition: all 1s (ease-in-out);
+        .container-one, .container-two {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 21px;
+        
+            .box-one-1 {
+                width: 50px;
+                height: 150px;
+                background-color: white;
+                border-radius: 10px 0px 0px 10px;
+                justify-content: center;
+                align-items: center;
+                .code {
+                    display: flex;
+                    color: rgb(0, 0, 0);
+                    flex-direction: column;
+                    transform: rotate(-90deg);
+                    width: 137px;
+                    height: 28px;
+                    p {
+                        font-size: 24px;
+                        font-family: 'Roboto';
+                    }
+                }
+             }
+            .box-center {
+                flex-direction: column;
+                position: relative;
+                width: 250px;
+                height: 150px;
+                background-color: white;
+                border-radius: 0px 10px 10px 0px;
+                justify-content: flex-start;
+                align-items: flex-start;  
+                .order-details {
+                    width: 235px;
+                    height: 33px;
+                    background-color: var(--red-0);
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    color: white;
+                    margin-top: 6px;
+                    margin-bottom: 8px; 
+                }
+                .table {
+                    display: inline-table;
+                    position: relative;
+                    width: 230px;
+                    margin-right: 0px;
+                    tr {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 6px;
+                    }
+                }
+            }    
+            .box-right {
+                height: 150px;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                display: flex;
+                padding: 16px;
+                border-radius: 0 10px 10px 0;
+                position: relative;
+                border-left: 2px dashed var(--black-3);
+                right: 6px;
+                background-color: white;
+                button {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        
+        
+            
+    }
+}
+
+       

@@ -1,0 +1,75 @@
+#home {
+    min-height: calc(100vh - 400px);
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .acess {
+        display: inline;
+        position: relative;
+        .register {
+            .login {
+                @include button-register-red;
+            }
+            .registration {
+                @include button-register-red-opacity;
+            }
+        }
+        .fields {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 52px;
+            background-color: var(--red-0);
+            border-radius: 0px 0px 10px 10px;
+            border: 1px solid var(--red-0);
+            .field {
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                margin: 10px;
+                input {
+                    width: 280px;
+                    height: 50px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    border-radius: 10px;
+                    color: var(--black-0);
+                    border: 0;
+                    background-color: var(--white-0);
+                }
+                label {
+                    position: absolute;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    left: 20px;
+                }
+            }
+        }
+        .actions {
+            margin-top: 10px;
+            position: absolute;
+            justify-content: space-between;
+            align-items: flex-start;
+            left: 35px;
+            right: 35px;
+            bottom: -10px;
+            div {
+                padding: 0px 50px 0px 0px;
+                a {
+                    color: var(--white-0);
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+            button {
+                @include button-actions-black;
+            }
+        }
+    }
+}

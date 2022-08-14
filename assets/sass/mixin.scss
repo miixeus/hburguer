@@ -1,0 +1,48 @@
+@mixin button-actions {
+    min-width: 110px;
+    border: none;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--black);
+}
+
+@mixin button-actions-black {
+    @include button-actions;
+    background-color: var(--black-2);
+    color: var(--white-0);
+}
+
+@mixin button-register-red {
+    width: 175px;
+    height: 64px;
+    text-transform: uppercase;
+    background-color: var(--red-0);
+    border: 1px solid var(--red-0);
+    border-radius: 10px 10px 0px 0px;
+    font-weight: 700;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-register-red-opacity {
+    width: 175px;
+    height: 64px;
+    text-transform: uppercase;
+    background-color: var(--red-opacity-0);
+    border: 1px solid var(--red-opacity-0);
+    border-radius: 10px 10px 0px 0px;
+    font-weight: 700;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+}

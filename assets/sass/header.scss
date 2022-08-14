@@ -1,0 +1,79 @@
+#header {
+    a {
+        margin: 43px auto 122px auto;
+    }
+    .logo-desktop {
+        display: none;
+    }
+}
+#header.image {
+    background-image: url('/assets/images/burguer-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    #overlay{
+        background-color: var(--black-opacity-0);
+        width: 100%;
+        position: relative;
+        a {
+            margin: 45px auto 122px auto;
+        }
+        div {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            picture {
+                a {
+                    margin: 0;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+#header-pay{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 368px;
+    background: linear-gradient(180deg, #070d0d80 50%, #070D0D 100%), url('../images/burguer-mobile.png');
+    background-size: cover;
+    .logo {
+        width: 220px;
+        height: 200px;
+        margin-top: 43px;
+        background-image: url('../images/logo-mobile.svg');
+        background-repeat: no-repeat;
+    }
+    .img-user {
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    #header {
+        margin: 75px auto 130px auto;
+        .logo-mobile {
+            display: none;
+        }
+        .logo-desktop {
+            display: flex;
+        }
+    }
+    #header.image {
+        margin: 0;
+        .logo-mobile {
+            display: none;
+        }
+        .logo-desktop {
+            display: flex;
+        }
+    }
+}
